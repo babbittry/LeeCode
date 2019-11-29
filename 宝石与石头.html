@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>宝石与石头</h3>
+    给定字符串J 代表石头中宝石的类型，和字符串 S代表你拥有的石头。 S 中每个字符代表了一种你拥有的石头的类型，你想知道你拥有的石头中有多少是宝石。
+
+    J 中的字母不重复，J 和 S中的所有字符都是字母。字母区分大小写，因此"a"和"A"是不同类型的石头。
+
+    <br><br>
+    示例1:
+    <div class="example">
+        输入: J = "aA", S = "aAAbbbb"<br>
+        输出: 3<br>
+    </div><br><br>
+    示例2:
+    <div class="example">
+        输入: J = "z", S = "ZZ"<br>
+        输出: 0<br>
+    </div><br><br>
+    注意:
+    <div class="example">
+        1. S 和 J 最多含有50个字母。<br>
+        2. J 中的字符不重复。<br>
+    </div><br><br>
+
+
+    <script>
+        var numJewelsInStones = function (J, S) {
+            var count = 0;
+            for (var i = 0; i < J.length; i++) {
+                //将 J 中的字母挨个将 S 分割，分割之后的数组长度减一
+                var n = (S.split(J[i]).length - 1);
+                count = count + n;
+            }
+            return count;
+        };
+        var result = numJewelsInStones("aA", "aAAbbabb");
+        console.log(result);
+    </script>
+</body>
+
+</html>
