@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>猜数字</h3>
+    小A 和 小B 在玩猜数字。小B 每次从 1, 2, 3 中随机选择一个，小A 每次也从 1, 2, 3 中选择一个猜。他们一共进行三次这个游戏，请返回小A猜对了几次<br>
+    输入的guess数组为 小A 每次的猜测，answer数组为 小B 每次的选择。guess和answer的长度都等于3。
+    <br><br>
+    示例:
+    <div class="example">
+        输入：guess = [1,2,3], answer = [1,2,3]<br>
+        输出：3<br>
+        解释：小A 每次都猜对了。<br>
+    </div><br><br>
+    <div class="example">
+        输入：guess = [2,2,3], answer = [3,2,1]<br>
+        输出：1<br>
+        解释：小A 只猜对了第二次。<br>
+    </div><br><br>
+    <div class="example">
+        1.exampleguess的长度 = 3<br>
+        2.exampleanswer的长度 = 3<br>
+        3.exampleguess的元素取值为 {1, 2, 3} 之一。<br>
+        4.exampleanswer的元素取值为 {1, 2, 3} 之一。<br>
+    </div><br><br>
+
+
+    <script>
+        var game = function (guess, answer) {
+            var count = 0;
+            for (var i = 0; i < 3; i++) {
+                if (guess[i] == answer[i]) {
+                    count++;
+                }
+            }
+            return count;
+        };
+
+        var result = game(guess = [2, 2, 3], answer = [3, 2, 1]);
+        console.log(result);
+    </script>
+</body>
+
+</html>

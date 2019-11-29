@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.example {
+    padding: 30px;
+    background-color: rgb(247, 247, 247);
+    line-height: 22px;
+    color: #555;
+}

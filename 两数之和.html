@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>两数之和</h3>
+    给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那<strong>两个</strong>整数，并返回他们的数组下标。<br>
+    你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。<br><br>
+    示例:
+    <div class="example">
+            给定 nums = [2, 7, 11, 15], target = 9<br>
+            因为 nums[0] + nums[1] = 2 + 7 = 9<br>
+            所以返回 [0, 1]<br>
+    </div>
+
+
+    <script>
+        var twoSum = function(nums, target) {
+            for (var i = 0; i < nums.length; i++) {
+                for (var j = i + 1; j < nums.length; j++) {
+                    if (target == nums[i] + nums[j]) {
+                        return[i, j];
+                        break;
+                    }
+                    
+                }
+            }
+        };
+
+        var result = twoSum([2, 7, 11, 15], 22);
+        console.log(result);
+        
+    </script>
+</body>
+</html>
